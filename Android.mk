@@ -9,6 +9,8 @@ include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES := libcutils
 
 LOCAL_INCLUDES += $(LOCAL_PATH)
+ 
+LOCAL_CFLAGS += -O3 -march=armv6zk -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=softfp
 
 ifneq ($(TARGET_SIMULATOR),true)
   LOCAL_CFLAGS  += -DQEMU_HARDWARE
